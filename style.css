@@ -1,0 +1,167 @@
+
+.head{
+    height:inherit;
+    text-align: center;
+    border-style: groove;
+    background-color: blue;
+    color: antiquewhite;
+}
+
+#subb{
+    font-family:cursive;
+    color: antiquewhite;
+    font-size: 17px;
+}
+
+h1 {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 6px;
+  background-color: cornflowerblue;
+}
+
+#h2 {
+    color: white;
+}
+
+h3 {
+    font-family:cursive;
+    color: antiquewhite;
+    font-size: 30px;
+}
+
+.container {
+    margin: 0 auto;
+    max-width: 80%;
+}
+input {
+    padding:0.5em;
+    outline: none;
+}
+
+.button {
+    padding:0.5em;
+    outline: none;
+    color:#fff;
+    margin: 5px;
+}
+
+.button a {
+    text-decoration: none;
+    color:#fff;
+}
+
+.editBtn {
+    background-color:darkorange;
+    text-decoration: none;
+}
+
+.delBtn {
+    background-color:darkorange;
+    text-decoration: none;
+}
+
+.addBtn {
+    background-color:cornflowerblue;
+}
+
+#editbtn2{
+    background-color:cornflowerblue;
+    color: #fff;
+}
+
+.go-right{
+    float: right;
+}
+.go-left{
+    float: left;
+}
+
+th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 6px;
+}
+
+
+tfoot {
+    background-color:cornflowerblue;
+    height:inherit;
+   
+    color: white;
+}
+
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+  text-align: right;
+}
+
+.copyright {
+    margin-top: 4em;
+    text-align: center;
+    background-color:azure;
+}
+
+img {
+	max-width: 150px;
+}
+
+#left {
+    float: left;
+    width: 100px;
+}
+#center {
+    margin: 0 auto;
+    width: 100px;
+}
+
+#right {
+    float: right;
+    width: 100px;
+}
+
+/* Style the buttons that are used to open and close the accordion panel */
+.accordion {
+    background-color:darkgray;
+    color: #fff;
+    cursor: pointer;
+    padding: 18px;
+    width: 85%;
+    text-align: left;
+    border: none;
+    outline: none;
+    transition: 0.4s;
+}
+
+/* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+.active, .accordion:hover {
+    background-color:crimson;
+    width: 99.9%;
+}
+
+.panel {
+    padding: 0 18px;
+    background-color: white;
+    display: none;
+    overflow: hidden;
+    border:1px solid rgb(219, 22, 121);
+    width: 96.4%;
+}
+
+.accordion:after {
+    content: '\02795'; /* Unicode character for "plus" sign (+) */
+    font-size: 13px;
+    color: #fff;
+    float: right;
+    margin-left: 5px;
+}
+
+.active:after {
+    content: "\2796"; /* Unicode character for "minus" sign (-) */
+}
+
+#spoiler{
+ display: none;
+}

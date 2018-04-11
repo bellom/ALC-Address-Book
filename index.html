@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Contacts</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+    
+    <form class="head">
+        <caption><h3><b>ALC<sub id="subb">2.0</sub> Team-WB-6 Address Book</b></h3></caption> 
+    </form>
+      
+    <table>
+      
+        <div class="container">
+            <form action="">
+                <label for="name"></label>
+                <input type="text" name="name" id="name" placeholder="Name" required>
+                <label for="email"></label>
+                <input type="text" name="email" id="email" placeholder="E-mail" required>
+                <label for="tel"></label>
+                <input type="tel" name="tel" id="tel" placeholder="Phone Number" required>
+                <input class="button addBtn" id="addBtn" type="submit" value="Add">
+            </form>
+
+            <div id="spoiler" role="aria-hidden">
+             <form action="javascript:void(0);" id="saveEdit">
+                <label for="name"></label>
+                <input type="text" name="name" id="edit-name" placeholder="Name" required>
+                <label for="email"></label>
+                <input type="text" name="email" id="edit-email" placeholder="E-mail" required>
+                <label for="tel"></label>
+                <input type="tel" name="tel" id="edit-tel" placeholder="Phone Number" required>
+             <input type="submit" id="editbtn2" value="Edit" /> <a onclick="CloseInput()" aria-label="Close">&#10006;</a>
+             </form>
+            </div>
+
+
+            <div class="contacts contactDisplay">
+                <h1 id="h2">Contacts:</h1>
+            </div>
+        </div>
+        
+          <tfoot>
+              <th colspan="3">Powered by:<i>Andela | Udacity | Google</i></th>
+              <th><i>ALC</i></th>
+          </tfoot>
+        
+    </table>
+
+    <div id="container">
+        <div id="left">
+            <a href="http://andela.com"><img src= "Andelalogo.png"></a>
+        </div>
+        <div id="right">
+            <a href="http://udacity.com"><img src= "udacitylogo.png"/></a>
+        </div>
+        <div id="center">
+            <a href="http://google.com"><img src= "googlelogo.png"></a>
+        </div> 
+    </div>
+        
+        <p class="copyright">&copy; 2018 Bellom Sean.</p>
+      
+      
+    <script src="main.js"></script>
+  </body>
+</html>
