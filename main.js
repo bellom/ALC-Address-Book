@@ -8,6 +8,8 @@ window.onload = function () {
 
     let contacts = document.querySelector(".contacts");
     const contactDisplay = document.querySelector(".contactDisplay");
+    let selectedid = null;
+    let iseditmode = false;
 
     contacts = [
         {
@@ -30,9 +32,15 @@ window.onload = function () {
 
     addBtn.addEventListener("click", function () {
         let newObj = new jsonStructure(name.value, email.value, tel.value);
+        if (iseditmode && selectedid){
+          // Remove old data
+          contacts.splice(selectedid, 1);
+          iseditmode = false;
+        }
         contacts.push(newObj);
         localStorage['contactBook'] = JSON.stringify(contacts);
         clearForm();
+        addBtn.value = "Add";
 
     })
     
@@ -71,32 +79,14 @@ window.onload = function () {
           alert("Reload the webpage to see changes.");
       }
       if(e.target.classList.contains("editBtn")){
+          iseditmode = true;
+          addBtn.value = "Save";
         // Get all fields in new form
-        var name = document.getElementById('edit-name');
-        var email = document.getElementById('edit-email');
-        var tel = document.getElementById('edit-tel');
-        var id = e.target.getAttribute("data-id");
+        selectedid = e.target.getAttribute("data-id");
         // Assign values to edit form
-        name.value = contacts[id].name;
-        email.value = contacts[id].email;
-        tel.value = contacts[id].tel;
-        // Display fields in form
-        document.getElementById('spoiler').style.display = 'block';
-        
-        // On submitting the form...
-        document.getElementById('saveEdit').onsubmit = function() {
-          var newName = name.value;
-          var newEmail = email.value;
-          var newTel = tel.value;
-          // Remove old data
-          contacts.splice(id, 1);
-          // Create a new object with updated info
-          let newObj = new jsonStructure(newName, newEmail, newTel);
-          contacts.push(newObj);
-          localStorage['contactBook'] = JSON.stringify(contacts);
-          // Close the form
-          CloseInput();
-        }
+        name.value = contacts[selectedid].name;
+        email.value = contacts[selectedid].email;
+        tel.value = contacts[selectedid].tel;
       }
     });
 
