@@ -34,6 +34,7 @@ h3 {
     margin: 0 auto;
     max-width: 80%;
 }
+
 input {
     padding:0.5em;
     outline: none;
@@ -87,7 +88,6 @@ th {
 tfoot {
     background-color:cornflowerblue;
     height:inherit;
-   
     color: white;
 }
 
@@ -98,7 +98,7 @@ table {
   text-align: right;
 }
 
-.copyright {
+p {
     margin-top: 4em;
     text-align: center;
     background-color:azure;
