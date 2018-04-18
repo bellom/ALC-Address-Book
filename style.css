@@ -35,6 +35,11 @@ h3 {
     max-width: 80%;
 }
 
+#container {
+    margin: 0 auto;
+    height: 40px;
+}
+
 input {
     padding:0.5em;
     outline: none;
