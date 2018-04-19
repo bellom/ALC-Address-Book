@@ -37,11 +37,14 @@ window.onload = function () {
           contacts.splice(selectedid, 1);
           iseditmode = false;
         }
+        if (name.value == "" || email.value == "" || tel.value == "") {
+            alert("Fill in the contact details");
+        }else { 
         contacts.push(newObj);
-        localStorage['contactBook'] = JSON.stringify(contacts);
+        localStorage['contactList'] = JSON.stringify(contacts);
         clearForm();
         addBtn.value = "Add";
-
+        }
     })
     
     
