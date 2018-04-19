@@ -57,10 +57,10 @@ window.onload = function () {
     }
 
     function showContacts() {
-        if (localStorage['contactBook'] === undefined) {
-            localStorage['contactBook'] = "[]";
+        if (localStorage['contactList'] === undefined) {
+            localStorage['contactList'] = "[]";
         } else {
-            contacts = JSON.parse(localStorage['contactBook']);
+            contacts = JSON.parse(localStorage['contactList']);
             for (let n in contacts) {
                 var str = '<button class="accordion">' + contacts[n].name + '</button>' + '<div class="panel"><p><strong>Email Address : </strong>' + contacts[n].email + '</p><p><strong>Phone Number : </strong>' + contacts[n].tel + ' </p><div class="del go-right"><a href="#" class="button delBtn" data-id="' + n + '">Delete</a></div><div class="go-right"><a href="#" class="button editBtn" data-id="' + n + '">Edit</a></div></div>';
                 contactDisplay.innerHTML += str;
@@ -68,16 +68,12 @@ window.onload = function () {
         }
     }
     showContacts();
-    
-    function CloseInput() {
-     document.getElementById('spoiler').style.display = 'none';
-    }
 
     contactDisplay.addEventListener("click", function (e) {
       if(e.target.classList.contains("delBtn")){
           var chosen = e.target.getAttribute("data-id");
           contacts.splice(chosen, 1);
-          localStorage['contactBook'] = JSON.stringify(contacts);
+          localStorage['contactList'] = JSON.stringify(contacts);
           // showContacts();
           alert("Reload the webpage to see changes.");
       }
